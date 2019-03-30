@@ -19,6 +19,21 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "src/pages/portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "portfolio-item"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        field: {label: "Image", name: "image", widget: "image"}
+
   - name: "pages"
     label: "Pages"
     files:
